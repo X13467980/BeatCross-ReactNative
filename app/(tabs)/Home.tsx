@@ -8,7 +8,12 @@ export default function HomeScreen() {
         style={styles.logo}
         resizeMode="contain"
       />
-      <Text style={styles.text}>BeatCross</Text>
+      <Image
+        source = {require('@/assets/images/SubTitle.png')}
+        style={styles.subtitle}
+        resizeMode="contain"
+      />
+      <Text style={styles.text}></Text>
     </View>
   );
 }
@@ -27,6 +32,11 @@ const styles = StyleSheet.create({
   logo: {
     width: 300,
     height: 300,
-    marginBottom: 20,
-  }
+    marginBottom: -70,
+  },
+  subtitle: {
+    width: 300,
+    height: 100,
+    marginTop: -70,
+  },
 });
