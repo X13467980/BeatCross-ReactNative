@@ -1,8 +1,13 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
+      <Image
+        source={require('@/assets/images/BeatCrossLogo.png')}
+        style={styles.logo}
+        resizeMode="contain"
+      />
       <Text style={styles.text}>BeatCross</Text>
     </View>
   );
@@ -19,4 +24,9 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
   },
+  logo: {
+    width: 300,
+    height: 300,
+    marginBottom: 20,
+  }
 });
