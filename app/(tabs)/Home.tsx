@@ -1,6 +1,8 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useRouter } from 'expo-router';
 
 export default function HomeScreen() {
+  const router = useRouter();
   return (
     <View style={styles.container}>
       <Image
@@ -13,7 +15,12 @@ export default function HomeScreen() {
         style={styles.subtitle}
         resizeMode="contain"
       />
-      <Text style={styles.text}></Text>
+      <TouchableOpacity style = {styles.loginButton} onPress={() => router.push('/login')}>
+        <Text style={styles.logintext}>Login</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style = {styles.registerButton} onPress={() => router.push('/register')}>
+        <Text style={styles.logintext}>Register</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -32,11 +39,38 @@ const styles = StyleSheet.create({
   logo: {
     width: 300,
     height: 300,
+    marginTop: -150,
     marginBottom: -70,
   },
   subtitle: {
     width: 300,
     height: 100,
     marginTop: -70,
+  },
+  loginButton: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    marginTop: 20,
+  },
+  logintext: {
+    color: '000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  registerButton: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    marginTop: 20,
+  },
+  registertext: {
+    color: '000000',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
