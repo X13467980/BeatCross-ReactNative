@@ -11,15 +11,15 @@ export default function HomeScreen() {
         resizeMode="contain"
       />
       <Image
-        source = {require('@/assets/images/SubTitle.png')}
+        source={require('@/assets/images/SubTitle.png')}
         style={styles.subtitle}
         resizeMode="contain"
       />
-      <TouchableOpacity style = {styles.loginButton} onPress={() => router.push('/login')}>
-        <Text style={styles.logintext}>Login</Text>
+      <TouchableOpacity style={styles.authButton} onPress={() => router.push('/login')}>
+        <Text style={styles.authText}>Login</Text>
       </TouchableOpacity>
-      <TouchableOpacity style = {styles.registerButton} onPress={() => router.push('/register')}>
-        <Text style={styles.logintext}>Register</Text>
+      <TouchableOpacity style={styles.authButton} onPress={() => router.push('/register')}>
+        <Text style={styles.authText}>Register</Text>
       </TouchableOpacity>
     </View>
   );
@@ -28,49 +28,33 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1C1E26', 
+    backgroundColor: '#1C1E26',
     justifyContent: 'center',
     alignItems: 'center',
   },
-  text: {
-    color: 'white',
-    fontSize: 20,
-  },
   logo: {
-    width: 300,
-    height: 300,
+    width: 350,
+    height: 350,
     marginTop: -150,
-    marginBottom: -70,
+    marginBottom: -80,
   },
   subtitle: {
     width: 300,
     height: 100,
     marginTop: -70,
+    marginBottom: -20,
   },
-  loginButton: {
+  authButton: {
     backgroundColor: '#FFFFFF',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: 12,
+    width: 200,
     borderRadius: 5,
     marginTop: 20,
+    alignItems: 'center',
   },
-  logintext: {
-    color: '000000',
+  authText: {
+    color: '#000000',
     fontSize: 18,
     fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  registerButton: {
-    backgroundColor: '#FFFFFF',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-    marginTop: 20,
-  },
-  registertext: {
-    color: '000000',
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
 });
