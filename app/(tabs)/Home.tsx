@@ -21,6 +21,9 @@ export default function HomeScreen() {
       <TouchableOpacity style={styles.authButton} onPress={() => router.push('/register')}>
         <Text style={styles.authText}>Register</Text>
       </TouchableOpacity>
+      <Text style={{ color: '#FFFFFF', marginTop: 20 }}>
+        BeatCross v1.0.0
+      </Text>
     </View>
   );
 }
@@ -33,13 +36,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: 350,
-    height: 350,
+    width: 400,
+    height: 400,
     marginTop: -150,
     marginBottom: -80,
   },
   subtitle: {
-    width: 300,
+    width: 250,
     height: 100,
     marginTop: -70,
     marginBottom: -20,
